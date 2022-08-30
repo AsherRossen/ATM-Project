@@ -38,5 +38,14 @@ public class atm {
 		
 	}
 	
+	private account numToAccount (int k) {
+		for (int i = 0; i<index; i++) {
+			if (a[i].getNum()==k) {
+				return a[i];
+				break;
+			}
+		}
+	}
+	
 	public 
 }
