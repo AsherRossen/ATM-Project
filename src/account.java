@@ -26,4 +26,8 @@ public class account {
 	{
 		return money;
 	}
+	
+	public void dep(double d) {
+		money+=d;
+	}
 }

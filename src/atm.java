@@ -56,7 +56,6 @@ public class atm {
 	
 	public double checkBalance (Integer i) {
 		if (!numExists((int)i)) {
-			System.out.println("account does not exist");
 			return 0.0;
 			
 		}
@@ -66,5 +65,14 @@ public class atm {
 		}
 	}
 	
-	
+	public boolean depositMoney(Integer i, double j) {
+		if (!numExists((int)i)) {
+			return false;
+		}
+		else {
+			account acc = numToAccount((int)i);
+			acc.dep(j);
+			return true;
+		}
+	}
 }
