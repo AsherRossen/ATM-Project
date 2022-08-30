@@ -1,9 +1,6 @@
 import java.util.ArrayList;
 
 public class atm {
-//	private double money;
-//	private boolean open;
-//	private int num;
 	private ArrayList <account> a;
 	
 	public atm () {
