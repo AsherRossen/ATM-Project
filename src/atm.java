@@ -63,22 +63,24 @@ public class atm {
 	}
 	
 	public boolean depositMoney(Integer i, double j) {
-		if (!numExists((int)i)) {
+		account acc = numToAccount((int)i);
+		double cash = acc.getMoney();
+		if (!numExists((int)i)|| j<=0) {
 			return false;
 		}
 		else {
-			account acc = numToAccount((int)i);
 			acc.dep(j);
 			return true;
 		}
 	}
 	
 	public boolean withdrawMoney (Integer i, double j) {
-		if (!numExists((int)i)) {
+		account acc = numToAccount((int)i);
+		double cash = acc.getMoney();
+		if (!numExists((int)i)|| j<=0||j>cash) {
 			return false;
 		}
 		else {
-			account acc = numToAccount((int)i);
 			acc.with(j);
 			return true;
 		}
