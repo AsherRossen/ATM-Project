@@ -1,37 +1,33 @@
+import java.util.ArrayList;
 
 public class atm {
 //	private double money;
 //	private boolean open;
 //	private int num;
-	private static int index;
-	private account[] a;
+	private ArrayList <account> a;
 	
 	public atm () {
-		index=0;
 	}
 	
 	public void openAccount (Integer i) {
 		if (!numExists((int)i)) {
 			account acc = new account ((int)i, 0);
-			a[index]=acc;
-			index++;
+			a.add(acc);
 		}
 	}
 	
 	public void openAccount (Integer i, double k) {
 		if (!numExists((int)i)) {
 			account acc = new account ((int)i, k);
-			a[index]=acc;
-			index++;
+			a.add(acc);
 		}
 		
 	}
 	
 	private boolean numExists(int k) {
-		for (int i = 0; i<index; i++) {
-			if (a[i].getNum()==k) {
+		for (int i = 0; i<a.size(); i++) {
+			if (a.get(i).getNum()==k) {
 				return true;
-				break;
 			}
 		}
 		return false;
@@ -39,13 +35,22 @@ public class atm {
 	}
 	
 	private account numToAccount (int k) {
-		for (int i = 0; i<index; i++) {
-			if (a[i].getNum()==k) {
-				return a[i];
-				break;
+		for (int i = 0; i<a.size(); i++) {
+			if (a.get(i).getNum()==k) {
+				return a.get(i);
 			}
 		}
+		return null;
 	}
 	
-	public 
+	public void closeAccount (Integer i) {
+		if (!numExists((int)i)) {
+			System.out.println("account does not exist");
+			
+		}
+		else {
+			account acc = numToAccount((int)i);
+			a.remove(acc);
+		}
+	}
 }
