@@ -21,4 +21,9 @@ public class account {
 	public int getNum() {
 		return num;
 	}
+	
+	public double getMoney()
+	{
+		return money;
+	}
 }

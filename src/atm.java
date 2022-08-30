@@ -53,4 +53,18 @@ public class atm {
 			a.remove(acc);
 		}
 	}
+	
+	public double checkBalance (Integer i) {
+		if (!numExists((int)i)) {
+			System.out.println("account does not exist");
+			return 0.0;
+			
+		}
+		else {
+			account acc = numToAccount((int)i);
+			return acc.getMoney();
+		}
+	}
+	
+	
 }
