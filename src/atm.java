@@ -44,12 +44,8 @@ public class atm {
 	}
 	
 	public void closeAccount (Integer i) {
-		if (!numExists((int)i)) {
-			System.out.println("account does not exist");
-			
-		}
-		else {
-			account acc = numToAccount((int)i);
+		account acc = numToAccount((int)i);
+		if (!numExists((int)i) || acc.getMoney()!=0) {
 			a.remove(acc);
 		}
 	}
