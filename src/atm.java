@@ -7,6 +7,7 @@ public class atm {
 	private ArrayList <account> a;
 	
 	public atm () {
+		a=new ArrayList<account>();
 	}
 	
 	public void openAccount (Integer i) {
@@ -25,6 +26,9 @@ public class atm {
 	}
 	
 	private boolean numExists(int k) {
+		if (a.size()==0) {
+			return false;
+		}
 		for (int i = 0; i<a.size(); i++) {
 			if (a.get(i).getNum()==k) {
 				return true;
@@ -68,6 +72,17 @@ public class atm {
 		else {
 			account acc = numToAccount((int)i);
 			acc.dep(j);
+			return true;
+		}
+	}
+	
+	public boolean withdrawMoney (Integer i, double j) {
+		if (!numExists((int)i)) {
+			return false;
+		}
+		else {
+			account acc = numToAccount((int)i);
+			acc.with(j);
 			return true;
 		}
 	}

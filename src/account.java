@@ -30,4 +30,8 @@ public class account {
 	public void dep(double d) {
 		money+=d;
 	}
+	
+	public void with(double d) {
+		money-=d;
+	}
 }
