@@ -1,9 +1,9 @@
 import java.util.ArrayList;
 
-public class atm {
+public class ATM {
 	private ArrayList <account> a;
 	
-	public atm () {
+	public ATM () {
 		a=new ArrayList<account>();
 	}
 	

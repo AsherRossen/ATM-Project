@@ -2,7 +2,7 @@
 public class atmTest {
 
 	public static void main(String[] args) {
-		atm a = new atm();
+		ATM a = new ATM();
 		
 		a.openAccount(123, 18.5);
 		a.openAccount(1687);
