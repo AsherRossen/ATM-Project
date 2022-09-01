@@ -36,6 +36,6 @@ System.out.println(chase.checkBalance(21504)); // Should be 0.0
 // Test other issues
 chase.withdrawMoney(00002, 2020.2);
 System.out.println(chase.checkBalance(00002)); // Should be 634.1 and 
-not a fraction more!
+//not a fraction more!
 }
 }
