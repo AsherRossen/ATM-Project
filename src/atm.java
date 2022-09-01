@@ -64,7 +64,6 @@ public class ATM {
 	
 	public boolean depositMoney(Integer i, double j) {
 		account acc = numToAccount((int)i);
-		double cash = acc.getMoney();
 		if (!numExists((int)i)|| j<=0) {
 			return false;
 		}
