@@ -24,14 +24,20 @@ public class account {
 	
 	public double getMoney()
 	{
+		int m = (int)(money*100);
+		money = (double)m/100.0;
 		return money;
 	}
 	
 	public void dep(double d) {
+		int m = (int)(money*100);
+		money = (double)m/100.0;
 		money+=d;
 	}
 	
 	public void with(double d) {
+		int m = (int)(money*100);
+		money = (double)m/100.0;
 		money-=d;
 	}
 }
