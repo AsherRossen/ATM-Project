@@ -76,8 +76,7 @@ public class ATM {
 	
 	public boolean withdrawMoney (Integer i, double j) {
 		account acc = numToAccount((int)i);
-		double cash = acc.getMoney();
-		if (!numExists((int)i)|| j<=0||j>cash) {
+		if (!numExists((int)i)|| j<=0||j>acc.getMoney()) {
 			return false;
 		}
 		else {
